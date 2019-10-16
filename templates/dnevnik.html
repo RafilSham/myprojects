@@ -1,0 +1,116 @@
+{% extends 'bar/top_bar.html' %}
+{% block dnevnik %}
+    <div class="all-content">
+    <form action="" method="GET" class="form-inline text-center">
+     <label>Выберите дату:
+     <input type="date" name="date" min ="{{ sched.st_day }}" max="{{ sched.end_day }}" class="form-control">
+     <input type="submit" value="Посмотреть" class="btn btn-primary"></label>
+    </form>
+    <div id="tabless">
+    <h3 align="center">{{ weekday }} {{ date }}</h3>
+    {% if sched %}
+    <table border=0 align=center class="table" width=90%>
+        <tr class="success"><th width=25%>Предмет</th>
+            <th width=40%>Домашнее задание</th>
+		    <th width=5%>Оценки</th>
+            <th width=40%>Комментарии</th>
+        </tr>
+
+
+        <!-- lesson 1 -->
+        <tr><td width=25%>{% if sched.s1%}{{ sched.s1 }}{% endif %}</td>
+             <td width=40%>
+                {% for hw in homeworks %}
+                    {% if hw.subject == sched.s1%}
+                        {{ hw.value }}
+                    {% endif %}
+                {% endfor %}</td>
+                {% for dnevnik in values %}
+                    {% if dnevnik.subject == sched.s1 %}
+		                <td width=5%>{{ dnevnik.value }}</td>
+                        <td width=40%>{{ dnevnik.comment }}</td>
+                    {% endif %}
+                {% endfor %}
+        </tr>
+
+        <tr><td width=25%>{% if sched.s2%}{{ sched.s2 }}{% endif %}</td>
+            <td width=40%>
+                {% for hw in homeworks %}
+                    {% if hw.subject == sched.s2%}
+                    {{ hw.value }}
+                    {% endif %}
+                {% endfor %}</td>
+		        {% for dnevnik in values %}
+                    {% if dnevnik.subject == sched.s2 %}
+		                <td width=5%>{{dnevnik.value }}</td>
+                        <td width=40%>{{ dnevnik.comment }}</td>
+                    {% endif %}
+                {% endfor %}
+        </tr>
+
+        <tr><td width=25%>{% if sched.s3%}{{ sched.s3 }}{% endif %}</td>
+             <td width=40%>
+                {% for hw in homeworks %}
+                    {% if hw.subject == sched.s3%}
+                    {{ hw.value }}
+                    {% endif %}
+                {% endfor %}</td>
+		        {% for dnevnik in values %}
+                    {% if dnevnik.subject == sched.s3 %}
+		                <td width=5%>{{ dnevnik.value }}</td>
+                        <td width=40%>{{ dnevnik.comment }}</td>
+                    {% endif %}
+                {% endfor %}
+        </tr>
+
+        <tr><td width=25%>{% if sched.s4%}{{ sched.s4 }}{% endif %}</td>
+             <td width=40%>
+                {% for hw in homeworks %}
+                    {% if hw.subject == sched.s4%}
+                    {{ hw.value }}
+                    {% endif %}
+                {% endfor %}</td>
+		        {% for dnevnik in values %}
+                    {% if dnevnik.subject == sched.s4 %}
+		                <td width=5%>{{ dnevnik.value }}</td>
+                        <td width=40%>{{ dnevnik.comment }}</td>
+                    {% endif %}
+                {% endfor %}
+        </tr>
+
+        <tr><td width=25%>{% if sched.s5%}{{ sched.s5 }}{% endif %}</td>
+             <td width=40%>
+                {% for hw in homeworks %}
+                    {% if hw.subject == sched.s5%}
+                    {{ hw.value }}
+                    {% endif %}
+                {% endfor %}</td>
+		        {% for dnevnik in values %}
+                    {% if dnevnik.subject == sched.s5 %}
+		                <td width=5%>{{ dnevnik.value }}</td>
+                        <td width=40%>{{ dnevnik.comment }}</td>
+                    {% endif %}
+                {% endfor %}
+        </tr>
+
+        <tr><td width=25%>{% if sched.s6%}{{ sched.s6 }}{% endif %}</td>
+             <td width=40%>
+                {% for hw in homeworks %}
+                    {% if hw.subject == sched.s6%}
+                    {{ hw.value }}
+                    {% endif %}
+                {% endfor %}</td>
+		        {% for dnevnik in values %}
+                    {% if dnevnik.subject == sched.s6 %}
+		                <td width=5%>{{ dnevnik.value }}</td>
+                        <td width=40%>{{ dnevnik.comment }}</td>
+                    {% endif %}
+                {% endfor %}
+        </tr>
+    </table>
+</div>
+    {% else %}
+    <h1 align="center">Выходной день</h1>
+    {% endif %}
+    </div>
+{% endblock %}

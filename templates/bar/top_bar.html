@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block topbar %}
+<div class="menu">
+   <div class="top-menu">
+    <ul>
+        <div class="btn-group navbar-btn navbar-left">
+            <li><a href="/main/me" class="click1">Главная</a></li>
+        </div>
+        <div style="margin-left:10px;margin-right:10px;float:left" class="btn-group navbar-btn navbar-right"> <li><a href="/main/profile" class="click1">Профиль</a></li>
+        <li><a href="/main/values" class="click1">Итоговые оценки</a></li>
+        <li class="button1"><a href="/auth/logout" class="click1">Выйти</a></li>
+        </div>
+    </ul>
+    </div>
+<div class="item-center"><h3>Дневник: {{ fname }} {{ sname }}</h3></div>
+</div>
+{% endblock %}

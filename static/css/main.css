@@ -1,0 +1,101 @@
+body{
+  background-color: rgba(128, 128, 128, 0.07);
+}
+
+h1{
+  color:red;
+}
+
+a.click1{
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em;
+  border-radius: 6px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+}
+
+a.click1:hover { background: rgb(53, 167, 110); }
+
+a.click1:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+.button1{
+  right: 0%;
+}
+
+#tabless{
+  width: 80%;
+  margin: 0 auto;
+}
+
+#mytab{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btn-color{
+    background-color: rgb(24, 151, 199);
+    border: none;
+    color: white;
+}
+
+.btn-color:hover{
+    background-color: #eee4ff;
+    border: none;
+}
+
+.top-menu li{
+	list-style:none;/*Убираем маркер*/
+	display:inline-block;/*Выстраиваем пункты в ряд*/
+	background:none;/*Цвет фона для пункта*/
+	position:relative;
+}
+.top-menu li:hover{
+	background:#eee;/*Цвет фона при наведение на пункт*/
+}
+.top-menu li a{
+	color:#222;/*Цвет шрифта в пункте*/
+	padding:5px 7px;/*Отступы для пункта*/
+	text-decoration:none;/*Убираем подчеркивание*/
+	display:block;
+}
+.top-menu li ul{
+	display:none;/*Прячем выпадающее меню*/
+	position:absolute;
+	padding-left:0;
+	width:120px;/*Ширина выпадающего меню*/
+	padding-top:3px;/*Отступ сверху у выпадающего меню*/
+}
+.top-menu li:hover ul{
+	display:block;/*Показываем выпадающее меню при наведение*/
+	left:0px;
+}
+
+.menu{
+  overflow: hidden;
+  height: 11%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(85, 224, 115, 0.25);
+}
+
+.item-center{
+  margin: auto;
+  width: 50%;
+  position: static;
+  text-align: center;
+}
+
+.all-content{
+  top: 80px;
+  height: 89%;
+  position: relative;
+}
+
+
+
